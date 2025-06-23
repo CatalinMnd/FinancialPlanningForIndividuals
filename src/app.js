@@ -16,6 +16,11 @@ dbConnect();
 //middlewares
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("Welcome to Financial Planning for Individuals API");
+});
+
+
 //routes
 app.use("/api/users",userRoute);
 
